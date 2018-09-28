@@ -3,7 +3,7 @@ package com.example.order.dto.responses;
 import java.io.Serializable;
 import java.util.Date;
 
-import com.example.order.dto.BaseDTO;
+import com.example.util.dto.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonInclude;

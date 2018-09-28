@@ -1,6 +1,7 @@
 package com.example.order.dto.events;
 
 import com.example.order.dto.requests.OrderCreationRequestDTO;
+import com.example.util.dto.events.ExceptionEvent;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonInclude;
