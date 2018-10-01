@@ -1,6 +1,6 @@
 package com.example.order.dto.requests;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import com.example.util.dto.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
@@ -24,9 +24,9 @@ public class OrderUpdateRequestDTO extends BaseDTO{
 	String company;
 	String division;
 	String busUnit;
-	Date orderDttm;
-	Date shipByDttm;
-	Date expectedDeliveryDttm;
+	LocalDateTime orderDttm;
+	LocalDateTime shipByDttm;
+	LocalDateTime expectedDeliveryDttm;
 	String deliveryType;
 	boolean isGift;
 	String giftMsg;

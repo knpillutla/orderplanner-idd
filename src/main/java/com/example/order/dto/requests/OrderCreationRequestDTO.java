@@ -1,6 +1,6 @@
 package com.example.order.dto.requests;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import com.example.util.dto.BaseDTO;
@@ -25,9 +25,9 @@ public class OrderCreationRequestDTO extends BaseDTO{
 	String busUnit;
 	String externalBatchNbr;
 	String orderNbr;
-	Date orderDttm;
-	Date shipByDttm;
-	Date expectedDeliveryDttm;
+	LocalDateTime orderDttm;
+	LocalDateTime shipByDttm;
+	LocalDateTime expectedDeliveryDttm;
 	String deliveryType;
 	boolean isGift;
 	String giftMsg;

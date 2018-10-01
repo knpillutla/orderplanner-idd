@@ -1,8 +1,8 @@
 package com.example.order.dto.responses;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import com.example.util.dto.BaseDTO;
@@ -30,9 +30,9 @@ public class OrderDTO  extends BaseDTO implements Serializable{
 	String batchNbr;
 	String orderNbr;
 	Integer statCode;
-	Date orderDttm;
-	Date shipByDttm;
-	Date expectedDeliveryDttm;
+	LocalDateTime orderDttm;
+	LocalDateTime shipByDttm;
+	LocalDateTime expectedDeliveryDttm;
 	String deliveryType;
 	boolean isGift;
 	String giftMsg;
@@ -40,7 +40,7 @@ public class OrderDTO  extends BaseDTO implements Serializable{
 	String transactionName;
 	String refField1;
 	String refField2;
-	Date updatedDttm;
+	LocalDateTime updatedDttm;
 	String updatedBy;
     String delFirstName;
     String delLastName;

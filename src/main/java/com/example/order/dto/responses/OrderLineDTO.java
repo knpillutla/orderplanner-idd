@@ -1,7 +1,7 @@
 package com.example.order.dto.responses;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import com.example.util.dto.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
@@ -36,7 +36,7 @@ public class OrderLineDTO  extends BaseDTO implements Serializable{
 	String transactionName;
 	String refField1;
 	String refField2;
-	Date updatedDttm;
+	LocalDateTime updatedDttm;
 	String updatedBy;
     double itemWidth;
     double itemHeight;
