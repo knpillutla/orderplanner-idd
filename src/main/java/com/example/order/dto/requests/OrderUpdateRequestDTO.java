@@ -28,7 +28,7 @@ public class OrderUpdateRequestDTO extends BaseDTO{
 	LocalDateTime shipByDttm;
 	LocalDateTime expectedDeliveryDttm;
 	String deliveryType;
-	boolean isGift;
+	Boolean isGift;
 	String giftMsg;
 	String source;
 	String transactionName;
