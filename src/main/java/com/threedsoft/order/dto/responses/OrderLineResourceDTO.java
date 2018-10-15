@@ -1,11 +1,11 @@
-package com.example.order.dto.responses;
+package com.threedsoft.order.dto.responses;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-import com.example.util.dto.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.threedsoft.util.dto.WMSResourceDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
-public class OrderLineDTO  extends BaseDTO implements Serializable{
+public class OrderLineResourceDTO  extends WMSResourceDTO{
 	Long id;
 	Integer locnNbr;
 	Long orderId;

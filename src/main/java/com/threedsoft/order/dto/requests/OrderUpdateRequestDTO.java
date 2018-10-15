@@ -1,11 +1,10 @@
-package com.example.order.dto.requests;
+package com.threedsoft.order.dto.requests;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
-import com.example.util.dto.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.threedsoft.util.dto.WMSRequestDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
@@ -17,29 +16,23 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
-public class OrderCreationRequestDTO extends BaseDTO{
+public class OrderUpdateRequestDTO extends WMSRequestDTO{
+	Long id;
 	String busName;
 	Integer locnNbr;
+	String orderNbr;
 	String company;
 	String division;
 	String busUnit;
-	String externalBatchNbr;
-	String orderNbr;
 	LocalDateTime orderDttm;
 	LocalDateTime shipByDttm;
 	LocalDateTime expectedDeliveryDttm;
 	String deliveryType;
-	boolean isGift;
+	Boolean isGift;
 	String giftMsg;
 	String source;
 	String transactionName;
 	String refField1;
 	String refField2;
 	String userId;
-	List<OrderLineCreationRequestDTO> orderLines;
-	
-	public void createHeaders() {
-		this.addHeader("eventName", "NewOrderEvent");
-	}
 }
-

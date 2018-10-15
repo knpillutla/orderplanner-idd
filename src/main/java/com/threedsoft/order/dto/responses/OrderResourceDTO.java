@@ -1,13 +1,13 @@
-package com.example.order.dto.responses;
+package com.threedsoft.order.dto.responses;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.util.dto.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.threedsoft.util.dto.WMSResourceDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
-public class OrderDTO  extends BaseDTO implements Serializable{
+public class OrderResourceDTO  extends WMSResourceDTO{
 	Long id;
 	String busName;
 	Integer locnNbr;
@@ -56,14 +56,13 @@ public class OrderDTO  extends BaseDTO implements Serializable{
 	String shipCarrier;
 	String shipService;
 	String trackingNbr;
-	List<OrderLineDTO> orderLines = new ArrayList<>();
-	
+	List<OrderLineResourceDTO> orderLines = new ArrayList<>();
 
-    public void addOrderLine(OrderLineDTO orderLineDTO) {
+    public void addOrderLine(OrderLineResourceDTO orderLineDTO) {
     	orderLines.add(orderLineDTO);
     }
  
-    public void removeOrderLine(OrderLineDTO orderLineDTO) {
+    public void removeOrderLine(OrderLineResourceDTO orderLineDTO) {
     	orderLines.remove(orderLineDTO);
     }
 }

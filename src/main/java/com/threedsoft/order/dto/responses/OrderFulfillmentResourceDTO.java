@@ -1,11 +1,11 @@
-package com.example.order.dto.responses;
+package com.threedsoft.order.dto.responses;
 
 import java.util.List;
 
-import com.example.order.dto.requests.OrderFulfillmentRequestDTO;
-import com.example.util.dto.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.threedsoft.order.dto.requests.OrderFulfillmentRequestDTO;
+import com.threedsoft.util.dto.WMSResourceDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
-public class OrderFulfillmentResponseDTO  extends BaseDTO{
+public class OrderFulfillmentResourceDTO  extends WMSResourceDTO{
 	String busName;
 	Integer locnNbr;
 	String busUnit;
@@ -33,10 +33,10 @@ public class OrderFulfillmentResponseDTO  extends BaseDTO{
 	Integer numOfOrders;
 	String orderSelectionOption; // by area/zone/aisle/pick density/deliveryType(prioriry vs non priority orders)/order date time/ship date time
 	String printOption; //byOrder, byPickPathSequence (will not be grouped by order), delivery type(express orders etc)
-	List<OrderDTO> successList;
+	List<OrderResourceDTO> successList;
 	List<Object> failureList;
 	
-	public OrderFulfillmentResponseDTO(OrderFulfillmentRequestDTO req) {
+	public OrderFulfillmentResourceDTO(OrderFulfillmentRequestDTO req) {
 		this.busName = req.getBusName();
 		this.locnNbr = req.getLocnNbr();
 		this.busUnit = req.getBusUnit();

@@ -1,8 +1,8 @@
-package com.example.order.dto.requests;
+package com.threedsoft.order.dto.requests;
 
-import com.example.util.dto.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.threedsoft.util.dto.WMSRequestDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
@@ -14,11 +14,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
-public class OrderLineCreationRequestDTO  extends BaseDTO{
+public class OrderLineInfoDTO extends WMSRequestDTO{
+	Long id;
+	Long orderId;
 	Integer orderLineNbr;
+	String busName;
+	Integer locnNbr;
+	String orderNbr;
+	String company;
+	String division;
 	String itemBrcd;
-	Integer origOrderQty;
-	Integer orderQty;
-	String refField1;
-	String refField2;
+	String busUnit;
+	Integer qty;
 }
