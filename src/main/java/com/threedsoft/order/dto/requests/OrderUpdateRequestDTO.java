@@ -24,10 +24,11 @@ public class OrderUpdateRequestDTO extends WMSRequestDTO{
 	String company;
 	String division;
 	String busUnit;
+	String deliveryType;
+	String externalBatchNbr;
 	LocalDateTime orderDttm;
 	LocalDateTime shipByDttm;
 	LocalDateTime expectedDeliveryDttm;
-	String deliveryType;
 	Boolean isGift;
 	String giftMsg;
 	String source;
