@@ -29,7 +29,7 @@ public class OrderUpdateRequestDTO extends WMSRequestDTO{
 	LocalDateTime orderDttm;
 	LocalDateTime shipByDttm;
 	LocalDateTime expectedDeliveryDttm;
-	Boolean isGift;
+	String isGift;
 	String giftMsg;
 	String source;
 	String transactionName;
